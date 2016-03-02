@@ -23,7 +23,7 @@ class Tree(object):
         # maintain a list of all the nodes to speed up random node sampling
         self.nodes = [self.root]
 
-    def add_child(self, parent, child_data):
+    def add_child(self, parent, child_data=None):
         '''Add a new child below the parent node.'''
 
         child = Tree.Node(child_data)
@@ -76,9 +76,9 @@ class Tree(object):
         if return_max_height:
             return max_height
 
-    def traverse(self, current_node, repeats=True):
-        '''Perform a depth first traversal, yielding a node each time
-           it's visited, starting from current_node.'''
+    def traverse(self, current_node):
+        '''Perform a depth first traversal below current_node, yielding a node each time
+           it's visited.'''
         yield current_node
         for child in current_node.children:
             traverse = self.traverse(child)

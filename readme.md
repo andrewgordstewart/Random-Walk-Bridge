@@ -41,3 +41,4 @@ or excursion, depending on whether the root is labelled:
 - It would be nice to visualize the bridges.
 - It would also be nice to see if the Rayleigh statistics appear in a reasonable number of steps.
 - Include a schematic to explain the necessity of the super-root.
+- Develop some tests to check behaviour.
